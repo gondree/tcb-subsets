@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="System_Hardware"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="6" org.eventb.core.identifier="ENDPOINTS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.identifier="CHANNELS"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.comment="``a medium for information transfer'' which is ``the only shared resource'' and ``cannot be directly accessed by subjects;'' we do not model this as a COMPONENT or OBJECT as ``no control policy must be enforced by any TCB subset relative to it'' (Sec 4, pg.135)" org.eventb.core.identifier="MEDIUM"/>
+<org.eventb.core.axiom name="8" org.eventb.core.comment="&quot;collections of devices&quot; (Sec 4, pg 135)" org.eventb.core.label="axm1" org.eventb.core.predicate="ENDPOINTS ⊆ ℙ(COMPONENTS)"/>
+<org.eventb.core.axiom name="*" org.eventb.core.comment="``communication channels \ldots are abstracted as collections of devices \ldots coupled by a medium'' (Sec 4, pg.135)" org.eventb.core.label="axm2" org.eventb.core.predicate="CHANNELS ⊆ (ENDPOINTS × ENDPOINTS) × MEDIUM"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="host_of_endpoint"/>
+<org.eventb.core.axiom name="0" org.eventb.core.comment="``channels [are] collections of devices local to the communicating TCB subsets'' (Sec 4, pg.135)" org.eventb.core.label="axm3" org.eventb.core.predicate="host_of_endpoint ∈ ENDPOINTS → HOSTS"/>
+<org.eventb.core.axiom name="9" org.eventb.core.comment="endpoints are associated with the host of the local devices comprising that endpoint" org.eventb.core.label="axm4" org.eventb.core.predicate="∀ep, ci · (ep ∈ ENDPOINTS ∧ ci ∈ ep) ⇒ (host_of_hw(ci) = host_of_endpoint(ep))"/>
+<org.eventb.core.axiom name=":" org.eventb.core.comment="endpoints are not comprised of components from different hosts" org.eventb.core.label="axm5" org.eventb.core.predicate="∀ci,cj,ep · (ep ∈ ENDPOINTS ∧ ci∈ep ∧ cj∈ep) ⇒ (host_of_hw(ci) = host_of_hw(cj))" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

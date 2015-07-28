@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="host_of_hw∈COMPONENTS → HOSTS" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#5" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧h1≠h2⇒c1≠c2" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#3" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="COMPONENTS" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.scCarrierSet name="HOSTS" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.carrierSet#7" org.eventb.core.type="ℙ(HOSTS)"/>
+<org.eventb.core.scConstant name="HW_DEVICES" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.constant#\/" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.scConstant name="HW_OBJECTS" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.constant#-" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.scConstant name="host_of_hw" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.constant#6" org.eventb.core.type="ℙ(COMPONENTS×HOSTS)"/>
+</org.eventb.core.scContextFile>

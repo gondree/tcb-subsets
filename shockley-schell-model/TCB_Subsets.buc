@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="Policy"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="TCBSUBSETS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.comment="``a collection of subset policies P(i)'' (Sec 3, pg.133)" org.eventb.core.identifier="POLICYSETS"/>
+<org.eventb.core.axiom name="R" org.eventb.core.comment="bijective relation of TCB subets to policysets: ``corresponding to each such policy subset a distinct TCB subset M(i) is postulated to exist'' (Sec 3, pg.133)" org.eventb.core.label="rel1" org.eventb.core.predicate="policy_of_tcb ∈ TCBSUBSETS ⤖ POLICIES"/>
+<org.eventb.core.axiom name="S" org.eventb.core.comment="total, injective relation of TCB subets to domains: ``disjoint TCB subsets, each of which resides in its own protection domain'' (Abstract); ``each TCB subset occupies its own hierarchical protection domain'' (Sec 3, pg.134)" org.eventb.core.label="rel2" org.eventb.core.predicate="domain_of_tcb ∈ TCBSUBSETS ↣ DOMAINS"/>
+<org.eventb.core.axiom name="T" org.eventb.core.comment="total relation of TCB subsets to hosts" org.eventb.core.label="rel3" org.eventb.core.predicate="host_of_tcb ∈ TCBSUBSETS → HOSTS"/>
+<org.eventb.core.axiom name="U" org.eventb.core.comment="relation among TCB subsets" org.eventb.core.label="rel4" org.eventb.core.predicate="privileged_wrt ∈ TCBSUBSETS ↔ TCBSUBSETS"/>
+<org.eventb.core.axiom name="V" org.eventb.core.comment="relation among TCB subsets" org.eventb.core.label="rel5" org.eventb.core.predicate="tamperproof_wrt ∈ TCBSUBSETS ↔ TCBSUBSETS"/>
+<org.eventb.core.axiom name="W" org.eventb.core.comment="relation among hosts and TCB subsets, since NTCB partitions open the possibility of many (local) reference monitors" org.eventb.core.label="rel6" org.eventb.core.predicate="reference_monitors ∈ HOSTS ↔ TCBSUBSETS"/>
+<org.eventb.core.axiom name="Y" org.eventb.core.label="pol1" org.eventb.core.predicate="∀a,t · a ∈ policy_of_tcb(t) ⇒ a ∈ POLICYSETS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="M" org.eventb.core.comment="the set of all reference monitors" org.eventb.core.identifier="RM"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="policy_of_tcb"/>
+<org.eventb.core.axiom name="@" org.eventb.core.comment="``the union of which includes every element of the original set P'' (Sec 3, pg.133)" org.eventb.core.label="pol2" org.eventb.core.predicate="POLICY ⊆ { a ∣ ∀t⦂TCBSUBSETS · a∈policy_of_tcb(t) }"/>
+<org.eventb.core.axiom name="\" org.eventb.core.comment="rephrases the above" org.eventb.core.label="pol3" org.eventb.core.predicate="POLICY ⊆ POLICYSETS" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="A" org.eventb.core.comment="it follows that ``If a particular access is prohibited, there must exist at least one subset of P, P(i), which prohibits the access'' (Sec 3, pg.133)" org.eventb.core.label="pol4" org.eventb.core.predicate="∀a · (a ∈ POLICY) ⇒ (∃t · a∈policy_of_tcb(t))" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="P" org.eventb.core.label="rm1" org.eventb.core.predicate="∀h,m · (h ↦ m ∈ reference_monitors) ⇔ (m ∈ RM ∧ h=host_of_tcb(m))"/>
+<org.eventb.core.axiom name="Q" org.eventb.core.label="rm2" org.eventb.core.predicate="RM ⊆ TCBSUBSETS" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="7" org.eventb.core.identifier="domain_of_tcb"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="9" org.eventb.core.identifier="host_of_tcb"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="=" org.eventb.core.identifier="privileged_wrt"/>
+<org.eventb.core.axiom name="`" org.eventb.core.comment="each host has at least 1 reference monitor" org.eventb.core.label="rm3" org.eventb.core.predicate="∀h · (h ∈ HOSTS) ⇒ (∃m · h ↦ m ∈ reference_monitors)"/>
+<org.eventb.core.axiom name="B" org.eventb.core.comment="relates the protection domain to the concept of a &quot;more privileged TCB subset&quot; and &quot;less-privileged TCB subset&quot; (Sec 3, pg. 135)" org.eventb.core.label="priv1" org.eventb.core.predicate="∀t1,t2 · (t1 ↦ t2 ∈ privileged_wrt) ⇔ (∃d1,d2 · d1=domain_of_tcb(t1) ∧ d2=domain_of_tcb(t2) ∧ d1 ↦ d2 ∈ dominates)"/>
+<org.eventb.core.axiom name="C" org.eventb.core.comment="it follows that different TCB subsets reside in different protection domains" org.eventb.core.label="priv2" org.eventb.core.predicate="∀t1,t2,d1,d2 · (d1=domain_of_tcb(t1) ∧ d2=domain_of_tcb(t2) ∧ t1≠t2) ⇒ (d1≠d2)" org.eventb.core.theorem="true"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="F" org.eventb.core.identifier="tamperproof_wrt"/>
+<org.eventb.core.axiom name="G" org.eventb.core.comment="&quot;[each] hierarchical protection domain \ldots is tamperproof with respect to all less privileged subsets \ldots&quot;" org.eventb.core.label="priv3" org.eventb.core.predicate="∀t1,t2 · (t1↦t2 ∈ tamperproof_wrt) ⇔ (t2↦t1 ∉ privileged_wrt)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="H" org.eventb.core.identifier="reference_monitors"/>
+<org.eventb.core.axiom name="]" org.eventb.core.comment="&quot;The correctness of the reference monitor can be independently established only if no other TCB subsets can tamper with it. Thus, it must inhabit a protection domain of its own which is tamperproof with regard to all other system or application software: it is the most privileged of the collection of TCB subsets.&quot; (Sec 3, pg. 133)" org.eventb.core.label="priv4" org.eventb.core.predicate="∀m1 · (m1 ∈ RM) ⇒ ( ∀mi⦂TCBSUBSETS · m1≠mi ⇒ m1 ↦ mi ∈ tamperproof_wrt )"/>
+<org.eventb.core.axiom name="^" org.eventb.core.comment="it follows that no TCB subset is privileged with respect to a reference monitor" org.eventb.core.label="priv5" org.eventb.core.predicate="∀m1,mj · (m1 ∈ RM ∧ mj ∈ TCBSUBSETS ∧ m1 ≠ mj) ⇒ (mj ↦ m1 ∉ privileged_wrt)" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

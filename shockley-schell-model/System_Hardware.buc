@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.comment="" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" org.eventb.core.label="System TCB" version="3">
+<org.eventb.core.carrierSet name=")" org.eventb.core.comment="``real system objects and resources (i.e., memory, devices, and so on)'' (pg. 133)" org.eventb.core.identifier="COMPONENTS"/>
+<org.eventb.core.constant name="-" org.eventb.core.comment="physical storage objects that comprise ``storage objects''" org.eventb.core.identifier="HW_OBJECTS"/>
+<org.eventb.core.constant name="/" org.eventb.core.comment="IO devices and other hardware resources" org.eventb.core.identifier="HW_DEVICES"/>
+<org.eventb.core.axiom name="," org.eventb.core.comment="a component is one of our hw types" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(COMPONENTS, HW_OBJECTS, HW_DEVICES)"/>
+<org.eventb.core.axiom name="5" org.eventb.core.comment="every component maps to some host" org.eventb.core.label="axm2" org.eventb.core.predicate="host_of_hw ∈ COMPONENTS → HOSTS"/>
+<org.eventb.core.axiom name="3" org.eventb.core.comment="different hosts share no components" org.eventb.core.label="axm3" org.eventb.core.predicate="∀h1,h2,c1,c2 · (h1=host_of_hw(c1) ∧ h2=host_of_hw(c2) ∧ h1≠h2) ⇒ (c1 ≠ c2)"/>
+<org.eventb.core.constant name="6" org.eventb.core.comment="a map from hardare components to hosts" org.eventb.core.identifier="host_of_hw"/>
+<org.eventb.core.carrierSet name="7" org.eventb.core.comment="identifiers for system hosts" org.eventb.core.identifier="HOSTS"/>
+</org.eventb.core.contextFile>

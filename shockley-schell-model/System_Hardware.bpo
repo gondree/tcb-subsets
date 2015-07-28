@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="COMPONENTS" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.poIdentifier name="HOSTS" org.eventb.core.type="ℙ(HOSTS)"/>
+<org.eventb.core.poIdentifier name="HW_DEVICES" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.poIdentifier name="HW_OBJECTS" org.eventb.core.type="ℙ(COMPONENTS)"/>
+<org.eventb.core.poIdentifier name="host_of_hw" org.eventb.core.type="ℙ(COMPONENTS×HOSTS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/shockley-schell-model/System_Hardware.bpo|org.eventb.core.poFile#System_Hardware|org.eventb.core.poPredicateSet#HYP("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀h1⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·c1∈dom(host_of_hw)∧host_of_hw∈COMPONENTS ⇸ HOSTS∧(h1=host_of_hw(c1)⇒c2∈dom(host_of_hw))" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#3"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/shockley-schell-model/System_Hardware.bpo|org.eventb.core.poFile#System_Hardware|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/shockley-schell-model/System_Hardware.bpo|org.eventb.core.poFile#System_Hardware|org.eventb.core.poPredicateSet#HYP("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP(" org.eventb.core.parentSet="/shockley-schell-model/System_Hardware.bpo|org.eventb.core.poFile#System_Hardware|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="host_of_hw∈COMPONENTS → HOSTS" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#5"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/shockley-schell-model/System_Hardware.bpo|org.eventb.core.poFile#System_Hardware|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧h1≠h2⇒c1≠c2" org.eventb.core.source="/shockley-schell-model/System_Hardware.buc|org.eventb.core.contextFile#System_Hardware|org.eventb.core.axiom#3"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

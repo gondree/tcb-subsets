@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="System_Network"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.comment="``passive data repositories to be protected'' (Sec 2, pg. 132)" org.eventb.core.identifier="OBJECTS"/>
+<org.eventb.core.axiom name="I" org.eventb.core.comment="relation for the &quot;hierarchical&quot; relationship between protection domains" org.eventb.core.label="dom1" org.eventb.core.predicate="dominates ∈ DOMAINS ↔ DOMAINS"/>
+<org.eventb.core.axiom name="J" org.eventb.core.comment="reflexive" org.eventb.core.label="dom2" org.eventb.core.predicate="∀a · (a ↦ a ∈ dominates)"/>
+<org.eventb.core.axiom name="M" org.eventb.core.comment="transitive" org.eventb.core.label="dom3" org.eventb.core.predicate="∀a,b,c · (a↦b ∈ dominates ∧ b↦c ∈ dominates) ⇒ (a↦c ∈ dominates) "/>
+<org.eventb.core.axiom name="N" org.eventb.core.comment="antisymmetric" org.eventb.core.label="dom4" org.eventb.core.predicate="∀a,b · (a↦b ∈ dominates ∧ b↦a ∈ dominates) ⇒ (a=b)"/>
+<org.eventb.core.axiom name="6" org.eventb.core.comment="``objects may be divided into two general categories'' (Sec 3, pg. 134)" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(OBJECTS, VIRTUAL_OBJECTS, STORAGE_OBJECTS)"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.comment="``hierarchical protection domains'' (Sec 2, pg. 132)" org.eventb.core.identifier="DOMAINS"/>
+<org.eventb.core.carrierSet name="-" org.eventb.core.comment="left uninterpreted by [SS87]; likely it includes PID/UID/GID" org.eventb.core.identifier="PROCESSES"/>
+<org.eventb.core.constant name="." org.eventb.core.comment="``active entites to be controlled'' (Sec 2, pg. 132)" org.eventb.core.identifier="SUBJECTS"/>
+<org.eventb.core.axiom name="/" org.eventb.core.comment="``a subject is a &lt;process, domain&gt; pair'' (Sec. 4, pg. 136); we extend this to the NTCB case." org.eventb.core.label="axm2" org.eventb.core.predicate="SUBJECTS ⊆ HOSTS × DOMAINS × PROCESSES"/>
+<org.eventb.core.constant name="8" org.eventb.core.comment="``those objects inherited from the hardware and exported by the reference monitor'' (Sec 3, pg. 135), ``inherited with no essential changes from underlying TCB subsets'' (Sec 3, pg. 134)" org.eventb.core.identifier="STORAGE_OBJECTS"/>
+<org.eventb.core.constant name="5" org.eventb.core.comment="``those [objects] which are abstractions built from more primitive underlying objects'' (Sec 3, pg. 135)" org.eventb.core.identifier="VIRTUAL_OBJECTS"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="D" org.eventb.core.identifier="dominates"/>
+<org.eventb.core.constant name="1" org.eventb.core.identifier="host_of_obj"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="hw_of_obj"/>
+<org.eventb.core.axiom name="3" org.eventb.core.comment="every object maps to some host" org.eventb.core.label="axm3" org.eventb.core.predicate="host_of_obj ∈ OBJECTS → HOSTS"/>
+<org.eventb.core.axiom name="9" org.eventb.core.comment="bijective fn between storage object abstraction to concrete hardware objects" org.eventb.core.label="axm4" org.eventb.core.predicate="hw_of_obj ∈ STORAGE_OBJECTS ⤖ HW_OBJECTS"/>
+<org.eventb.core.axiom name="B" org.eventb.core.label="axm5" org.eventb.core.predicate="∀x · x ∈ VIRTUAL_OBJECTS ⇒ x ∉ STORAGE_OBJECTS" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

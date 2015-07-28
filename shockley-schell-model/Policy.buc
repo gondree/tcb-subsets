@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="MODE"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="3" org.eventb.core.comment="the abstract access control policy" org.eventb.core.identifier="POLICY"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="7" org.eventb.core.comment="all possible sets of prohibited accesses: ``the convention of representing the abstract access control policy as a [set] of prohibited accesses has been used, because failure to grant an allowed access is not normally considered an insecurity'' (Sec 2, pg. 133)" org.eventb.core.identifier="POLICIES"/>
+<org.eventb.core.constant name="2" org.eventb.core.comment="all possible requests" org.eventb.core.identifier="ACCESSES"/>
+<org.eventb.core.constant name="(" org.eventb.core.identifier="read"/>
+<org.eventb.core.constant name=")" org.eventb.core.identifier="write"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="5" org.eventb.core.identifier="execute"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(MODE, {read}, {write}, {execute})"/>
+<org.eventb.core.extendsContext name="," org.eventb.core.target="Subjects_and_Objects"/>
+<org.eventb.core.axiom name="0" org.eventb.core.comment="``the basic security-relevant operation available to subjects is a request (to the TCB subset) to access a particular object in a particular access mode (e.g., read, write, or execute)'' (Sec 2, pg. 133)" org.eventb.core.label="axm2" org.eventb.core.predicate="ACCESSES = SUBJECTS × OBJECTS × MODE"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="axm3" org.eventb.core.predicate="POLICIES = ℙ(ACCESSES)"/>
+<org.eventb.core.axiom name="8" org.eventb.core.comment="``this policy may be thought of as a [set] of ordered triples &lt;s,o,m&gt; \ldots of accesses which must be prohibited'' (Sec. 2, pg. 133)" org.eventb.core.label="axm4" org.eventb.core.predicate="POLICY ∈ POLICIES"/>
+</org.eventb.core.contextFile>
