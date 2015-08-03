@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
 <org.eventb.core.extendsContext name="'" org.eventb.core.target="TCB_Subsets"/>
-<org.eventb.core.axiom name="(" org.eventb.core.comment="``a single TCB subset can be identified for each object which is the ``source'' of that object'' (Sec 3, pg. 135)" org.eventb.core.label="axm1" org.eventb.core.predicate="source_of_obj ∈ OBJECTS → TCBSUBSETS"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="source_of_obj"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.comment="``The concept of a 'protected object' requires some interpretation'' (Sec 3, pg. 134)" org.eventb.core.identifier="protected_objs"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="protected_objs ∈ TCBSUBSETS → ℙ(OBJECTS)"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.comment="``those which are inherited with no essential changes from underlying TCB subsets'' (Sec 3, pg. 134)" org.eventb.core.identifier="inherited_objs"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.comment="``'interpretively accessed', 'indirectly accessed', 'virtual', or 'abstract' objects'' (Sec 3, pg. 134)" org.eventb.core.identifier="interpreted_objs"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.comment="``[a] TCB subset may be viewed at its interface as providing a collection of objects'' (Sec 3, pg. 134)" org.eventb.core.identifier="interface_objs"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm2" org.eventb.core.predicate="inherited_objs ∈ TCBSUBSETS → ℙ(OBJECTS)"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm3" org.eventb.core.predicate="interpreted_objs ∈ TCBSUBSETS → ℙ(OBJECTS)"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="interface_objs ∈ TCBSUBSETS → ℙ(OBJECTS)"/>
 </org.eventb.core.contextFile>

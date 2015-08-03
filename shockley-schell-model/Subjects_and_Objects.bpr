@@ -1178,31 +1178,31 @@
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="axm5/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15" org.eventb.core.prSets="COMPONENTS,DOMAINS,HOSTS,MEDIUM,OBJECTS">
+<org.eventb.core.prProof name="axm5/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="x" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10" org.eventb.core.prSets="COMPONENTS,DOMAINS,HOSTS,OBJECTS,PROCESSES">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(COMPONENTS,HW_OBJECTS,HW_DEVICES))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p16" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p13"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p13"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p11" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p7"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(OBJECTS,VIRTUAL_OBJECTS,STORAGE_OBJECTS))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p17" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p6"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p6"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p8"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p20"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p21"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p22"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees x)" org.eventb.core.prGoal="p15" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p19">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="OBJECTS"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p24">
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p25" org.eventb.core.prHyps="p10,p15,p12,p5,p4,p1,p7,p11,p9,p2,p3,p13,p8,p6,p14,p24">
-<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p19" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p20">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p21" org.eventb.core.prHyps="p2,p10,p6,p5,p9,p1,p3,p7,p4,p8,p20">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -1218,57 +1218,54 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="CHANNELS" org.eventb.core.type="ℙ(ℙ(COMPONENTS)×ℙ(COMPONENTS)×MEDIUM)"/>
-<org.eventb.core.prIdent name="ENDPOINTS" org.eventb.core.type="ℙ(ℙ(COMPONENTS))"/>
 <org.eventb.core.prIdent name="HW_DEVICES" org.eventb.core.type="ℙ(COMPONENTS)"/>
 <org.eventb.core.prIdent name="HW_OBJECTS" org.eventb.core.type="ℙ(COMPONENTS)"/>
 <org.eventb.core.prIdent name="STORAGE_OBJECTS" org.eventb.core.type="ℙ(OBJECTS)"/>
+<org.eventb.core.prIdent name="SUBJECTS" org.eventb.core.type="ℙ(PROCESSES×DOMAINS)"/>
 <org.eventb.core.prIdent name="VIRTUAL_OBJECTS" org.eventb.core.type="ℙ(OBJECTS)"/>
 <org.eventb.core.prIdent name="dominates" org.eventb.core.type="ℙ(DOMAINS×DOMAINS)"/>
-<org.eventb.core.prIdent name="host_of_endpoint" org.eventb.core.type="ℙ(ℙ(COMPONENTS)×HOSTS)"/>
-<org.eventb.core.prIdent name="host_of_hw" org.eventb.core.type="ℙ(COMPONENTS×HOSTS)"/>
 <org.eventb.core.prIdent name="host_of_obj" org.eventb.core.type="ℙ(OBJECTS×HOSTS)"/>
+<org.eventb.core.prIdent name="host_of_subj" org.eventb.core.type="ℙ(PROCESSES×DOMAINS×HOSTS)"/>
 <org.eventb.core.prIdent name="hw_of_obj" org.eventb.core.type="ℙ(OBJECTS×COMPONENTS)"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="x∈VIRTUAL_OBJECTS⇒¬x∈STORAGE_OBJECTS">
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="x∈VIRTUAL_OBJECTS⇒¬x∈STORAGE_OBJECTS">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="OBJECTS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="hw_of_obj∈STORAGE_OBJECTS ⤖ HW_OBJECTS"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀ci⦂COMPONENTS,cj⦂COMPONENTS,ep⦂ℙ(COMPONENTS)·ep∈ENDPOINTS∧ci∈ep∧cj∈ep⇒host_of_hw(ci)=host_of_hw(cj)"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀ep⦂ℙ(COMPONENTS),ci⦂COMPONENTS·ep∈ENDPOINTS∧ci∈ep⇒host_of_hw(ci)=host_of_endpoint(ep)"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒¬x∈STORAGE_OBJECTS"/>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="ENDPOINTS⊆ℙ(COMPONENTS)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="VIRTUAL_OBJECTS∩STORAGE_OBJECTS=(∅ ⦂ ℙ(OBJECTS))"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS,c⦂DOMAINS·a ↦ b∈dominates∧b ↦ c∈dominates⇒a ↦ c∈dominates"/>
-<org.eventb.core.prPred name="p24" org.eventb.core.predicate="x∈VIRTUAL_OBJECTS">
-<org.eventb.core.prIdent name="x" org.eventb.core.type="OBJECTS"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="OBJECTS=VIRTUAL_OBJECTS∪STORAGE_OBJECTS"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="host_of_obj∈OBJECTS → HOSTS"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="partition(OBJECTS,VIRTUAL_OBJECTS,STORAGE_OBJECTS)"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧¬h1=h2⇒¬c1=c2"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="CHANNELS⊆ENDPOINTS × ENDPOINTS × MEDIUM"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="∀a⦂DOMAINS·a ↦ a∈dominates"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="SUBJECTS⊆HOSTS × DOMAINS × PROCESSES">
-<org.eventb.core.prIdent name="PROCESSES" org.eventb.core.type="ℙ(PROCESSES)"/>
-<org.eventb.core.prIdent name="SUBJECTS" org.eventb.core.type="ℙ(HOSTS×DOMAINS×PROCESSES)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="COMPONENTS=HW_OBJECTS∪HW_DEVICES"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="hw_of_obj∈STORAGE_OBJECTS ⤖ HW_OBJECTS"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀a⦂DOMAINS·a ↦ a∈dominates"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒x∉STORAGE_OBJECTS"/>
-<org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬x∈STORAGE_OBJECTS">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="COMPONENTS=HW_OBJECTS∪HW_DEVICES"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="SUBJECTS⊆PROCESSES × DOMAINS"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬x∈STORAGE_OBJECTS">
 <org.eventb.core.prIdent name="x" org.eventb.core.type="OBJECTS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="dominates∈DOMAINS ↔ DOMAINS"/>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧h1≠h2⇒c1≠c2"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="host_of_hw∈COMPONENTS → HOSTS"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS·a ↦ b∈dominates∧b ↦ a∈dominates⇒a=b"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="host_of_endpoint∈ENDPOINTS → HOSTS"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="HW_OBJECTS∩HW_DEVICES=(∅ ⦂ ℙ(COMPONENTS))"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="dominates∈DOMAINS ↔ DOMAINS"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="ENDPOINTS⊆ℙ(COMPONENTS)">
+<org.eventb.core.prIdent name="ENDPOINTS" org.eventb.core.type="ℙ(ℙ(COMPONENTS))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒¬x∈STORAGE_OBJECTS"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="VIRTUAL_OBJECTS∩STORAGE_OBJECTS=(∅ ⦂ ℙ(OBJECTS))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="host_of_subj∈SUBJECTS → HOSTS"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS,c⦂DOMAINS·a ↦ b∈dominates∧b ↦ c∈dominates⇒a ↦ c∈dominates"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="x∈VIRTUAL_OBJECTS">
+<org.eventb.core.prIdent name="x" org.eventb.core.type="OBJECTS"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧h1≠h2⇒c1≠c2">
+<org.eventb.core.prIdent name="host_of_hw" org.eventb.core.type="ℙ(COMPONENTS×HOSTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="OBJECTS=VIRTUAL_OBJECTS∪STORAGE_OBJECTS"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="host_of_obj∈OBJECTS → HOSTS"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS·a ↦ b∈dominates∧b ↦ a∈dominates⇒a=b"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="HW_OBJECTS∩HW_DEVICES=(∅ ⦂ ℙ(COMPONENTS))"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="partition(OBJECTS,VIRTUAL_OBJECTS,STORAGE_OBJECTS)"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀h1⦂HOSTS,h2⦂HOSTS,c1⦂COMPONENTS,c2⦂COMPONENTS·h1=host_of_hw(c1)∧h2=host_of_hw(c2)∧¬h1=h2⇒¬c1=c2">
+<org.eventb.core.prIdent name="host_of_hw" org.eventb.core.type="ℙ(COMPONENTS×HOSTS)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

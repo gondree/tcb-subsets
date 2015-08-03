@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="51">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="51">
+<org.eventb.core.poFile org.eventb.core.poStamp="58">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="58">
 <org.eventb.core.poIdentifier name="COMPONENTS" org.eventb.core.type="ℙ(COMPONENTS)"/>
 <org.eventb.core.poIdentifier name="HOSTS" org.eventb.core.type="ℙ(HOSTS)"/>
 <org.eventb.core.poIdentifier name="HW_DEVICES" org.eventb.core.type="ℙ(COMPONENTS)"/>
@@ -22,37 +22,39 @@
 <org.eventb.core.poIdentifier name="OBJECTS" org.eventb.core.type="ℙ(OBJECTS)"/>
 <org.eventb.core.poIdentifier name="PROCESSES" org.eventb.core.type="ℙ(PROCESSES)"/>
 <org.eventb.core.poIdentifier name="STORAGE_OBJECTS" org.eventb.core.type="ℙ(OBJECTS)"/>
-<org.eventb.core.poIdentifier name="SUBJECTS" org.eventb.core.type="ℙ(HOSTS×DOMAINS×PROCESSES)"/>
+<org.eventb.core.poIdentifier name="SUBJECTS" org.eventb.core.type="ℙ(PROCESSES×DOMAINS)"/>
 <org.eventb.core.poIdentifier name="VIRTUAL_OBJECTS" org.eventb.core.type="ℙ(OBJECTS)"/>
 <org.eventb.core.poIdentifier name="dominates" org.eventb.core.type="ℙ(DOMAINS×DOMAINS)"/>
 <org.eventb.core.poIdentifier name="host_of_obj" org.eventb.core.type="ℙ(OBJECTS×HOSTS)"/>
+<org.eventb.core.poIdentifier name="host_of_subj" org.eventb.core.type="ℙ(PROCESSES×DOMAINS×HOSTS)"/>
 <org.eventb.core.poIdentifier name="hw_of_obj" org.eventb.core.type="ℙ(OBJECTS×COMPONENTS)"/>
 <org.eventb.core.poPredicate name="host_of_endpoinz" org.eventb.core.predicate="dominates∈DOMAINS ↔ DOMAINS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#I"/>
 <org.eventb.core.poPredicate name="host_of_endpoin{" org.eventb.core.predicate="∀a⦂DOMAINS·a ↦ a∈dominates" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#J"/>
 <org.eventb.core.poPredicate name="host_of_endpoin|" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS,c⦂DOMAINS·a ↦ b∈dominates∧b ↦ c∈dominates⇒a ↦ c∈dominates" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#M"/>
 <org.eventb.core.poPredicate name="host_of_endpoin}" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS·a ↦ b∈dominates∧b ↦ a∈dominates⇒a=b" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#N"/>
 <org.eventb.core.poPredicate name="host_of_endpoin~" org.eventb.core.predicate="partition(OBJECTS,VIRTUAL_OBJECTS,STORAGE_OBJECTS)" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#6"/>
-<org.eventb.core.poPredicate name="host_of_endpoio'" org.eventb.core.predicate="SUBJECTS⊆HOSTS × DOMAINS × PROCESSES" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="host_of_endpoio'" org.eventb.core.predicate="SUBJECTS⊆PROCESSES × DOMAINS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#\/"/>
 <org.eventb.core.poPredicate name="host_of_endpoio(" org.eventb.core.predicate="host_of_obj∈OBJECTS → HOSTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#3"/>
-<org.eventb.core.poPredicate name="host_of_endpoio)" org.eventb.core.predicate="hw_of_obj∈STORAGE_OBJECTS ⤖ HW_OBJECTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#9"/>
-<org.eventb.core.poPredicate name="host_of_endpoio*" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒x∉STORAGE_OBJECTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#B"/>
+<org.eventb.core.poPredicate name="host_of_endpoio)" org.eventb.core.predicate="host_of_subj∈SUBJECTS → HOSTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#R"/>
+<org.eventb.core.poPredicate name="host_of_endpoio*" org.eventb.core.predicate="hw_of_obj∈STORAGE_OBJECTS ⤖ HW_OBJECTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#9"/>
+<org.eventb.core.poPredicate name="host_of_endpoio+" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒x∉STORAGE_OBJECTS" org.eventb.core.source="/shockley-schell-model/Subjects_and_Objects.buc|org.eventb.core.contextFile#Subjects_and_Objects|org.eventb.core.axiom#B"/>
 <org.eventb.core.poIdentifier name="MODE" org.eventb.core.type="ℙ(MODE)"/>
-<org.eventb.core.poIdentifier name="ACCESSES" org.eventb.core.type="ℙ(HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE)"/>
-<org.eventb.core.poIdentifier name="POLICIES" org.eventb.core.type="ℙ(ℙ(HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE))"/>
-<org.eventb.core.poIdentifier name="POLICY" org.eventb.core.type="ℙ(HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE)"/>
+<org.eventb.core.poIdentifier name="ACCESSES" org.eventb.core.type="ℙ(PROCESSES×DOMAINS×OBJECTS×MODE)"/>
+<org.eventb.core.poIdentifier name="POLICIES" org.eventb.core.type="ℙ(ℙ(PROCESSES×DOMAINS×OBJECTS×MODE))"/>
+<org.eventb.core.poIdentifier name="POLICY" org.eventb.core.type="ℙ(PROCESSES×DOMAINS×OBJECTS×MODE)"/>
 <org.eventb.core.poIdentifier name="execute" org.eventb.core.type="MODE"/>
 <org.eventb.core.poIdentifier name="read" org.eventb.core.type="MODE"/>
 <org.eventb.core.poIdentifier name="write" org.eventb.core.type="MODE"/>
-<org.eventb.core.poPredicate name="host_of_endpoio+" org.eventb.core.predicate="partition(MODE,{read},{write},{execute})" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#+"/>
-<org.eventb.core.poPredicate name="host_of_endpoio," org.eventb.core.predicate="ACCESSES=SUBJECTS × OBJECTS × MODE" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#0"/>
-<org.eventb.core.poPredicate name="host_of_endpoio-" org.eventb.core.predicate="POLICIES=ℙ(ACCESSES)" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#4"/>
-<org.eventb.core.poPredicate name="host_of_endpoio." org.eventb.core.predicate="POLICY∈POLICIES" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#8"/>
+<org.eventb.core.poPredicate name="host_of_endpoio," org.eventb.core.predicate="partition(MODE,{read},{write},{execute})" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="host_of_endpoio-" org.eventb.core.predicate="ACCESSES=SUBJECTS × OBJECTS × MODE" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="host_of_endpoio." org.eventb.core.predicate="POLICIES=ℙ(ACCESSES)" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#4"/>
+<org.eventb.core.poPredicate name="host_of_endpoio/" org.eventb.core.predicate="POLICY∈POLICIES" org.eventb.core.source="/shockley-schell-model/Policy.buc|org.eventb.core.contextFile#Policy|org.eventb.core.axiom#8"/>
 <org.eventb.core.poIdentifier name="TCBSUBSETS" org.eventb.core.type="ℙ(TCBSUBSETS)"/>
-<org.eventb.core.poIdentifier name="POLICYSETS" org.eventb.core.type="ℙ(HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE)"/>
+<org.eventb.core.poIdentifier name="POLICYSETS" org.eventb.core.type="ℙ(PROCESSES×DOMAINS×OBJECTS×MODE)"/>
 <org.eventb.core.poIdentifier name="RM" org.eventb.core.type="ℙ(TCBSUBSETS)"/>
 <org.eventb.core.poIdentifier name="domain_of_tcb" org.eventb.core.type="ℙ(TCBSUBSETS×DOMAINS)"/>
 <org.eventb.core.poIdentifier name="host_of_tcb" org.eventb.core.type="ℙ(TCBSUBSETS×HOSTS)"/>
-<org.eventb.core.poIdentifier name="policy_of_tcb" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE))"/>
+<org.eventb.core.poIdentifier name="policy_of_tcb" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(PROCESSES×DOMAINS×OBJECTS×MODE))"/>
 <org.eventb.core.poIdentifier name="privileged_wrt" org.eventb.core.type="ℙ(TCBSUBSETS×TCBSUBSETS)"/>
 <org.eventb.core.poIdentifier name="reference_monitors" org.eventb.core.type="ℙ(HOSTS×TCBSUBSETS)"/>
 <org.eventb.core.poIdentifier name="tamperproof_wrt" org.eventb.core.type="ℙ(TCBSUBSETS×TCBSUBSETS)"/>
@@ -62,10 +64,10 @@
 <org.eventb.core.poPredicate name="reference_monitorw" org.eventb.core.predicate="privileged_wrt∈TCBSUBSETS ↔ TCBSUBSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#U"/>
 <org.eventb.core.poPredicate name="reference_monitorx" org.eventb.core.predicate="tamperproof_wrt∈TCBSUBSETS ↔ TCBSUBSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#V"/>
 <org.eventb.core.poPredicate name="reference_monitory" org.eventb.core.predicate="reference_monitors∈HOSTS ↔ TCBSUBSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#W"/>
-<org.eventb.core.poPredicate name="reference_monitorz" org.eventb.core.predicate="∀a⦂HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE,t⦂TCBSUBSETS·a∈policy_of_tcb(t)⇒a∈POLICYSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#Y"/>
-<org.eventb.core.poPredicate name="reference_monitor{" org.eventb.core.predicate="POLICY⊆{a⦂HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE·∀t⦂TCBSUBSETS·a∈policy_of_tcb(t) ∣ a}" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#@"/>
+<org.eventb.core.poPredicate name="reference_monitorz" org.eventb.core.predicate="∀a⦂PROCESSES×DOMAINS×OBJECTS×MODE,t⦂TCBSUBSETS·a∈policy_of_tcb(t)⇒a∈POLICYSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#Y"/>
+<org.eventb.core.poPredicate name="reference_monitor{" org.eventb.core.predicate="POLICY⊆{a⦂PROCESSES×DOMAINS×OBJECTS×MODE·∀t⦂TCBSUBSETS·a∈policy_of_tcb(t) ∣ a}" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#@"/>
 <org.eventb.core.poPredicate name="reference_monitor|" org.eventb.core.predicate="POLICY⊆POLICYSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#\\"/>
-<org.eventb.core.poPredicate name="reference_monitor}" org.eventb.core.predicate="∀a⦂HOSTS×DOMAINS×PROCESSES×OBJECTS×MODE·a∈POLICY⇒(∃t⦂TCBSUBSETS·a∈policy_of_tcb(t))" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#A"/>
+<org.eventb.core.poPredicate name="reference_monitor}" org.eventb.core.predicate="∀a⦂PROCESSES×DOMAINS×OBJECTS×MODE·a∈POLICY⇒(∃t⦂TCBSUBSETS·a∈policy_of_tcb(t))" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#A"/>
 <org.eventb.core.poPredicate name="reference_monitor~" org.eventb.core.predicate="∀h⦂HOSTS,m⦂TCBSUBSETS·h ↦ m∈reference_monitors⇔m∈RM∧h=host_of_tcb(m)" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#P"/>
 <org.eventb.core.poPredicate name="reference_monitos'" org.eventb.core.predicate="RM⊆TCBSUBSETS" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#Q"/>
 <org.eventb.core.poPredicate name="reference_monitos(" org.eventb.core.predicate="∀h⦂HOSTS·h∈HOSTS⇒(∃m⦂TCBSUBSETS·h ↦ m∈reference_monitors)" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#`"/>
@@ -74,9 +76,17 @@
 <org.eventb.core.poPredicate name="reference_monitos+" org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS·t1 ↦ t2∈tamperproof_wrt⇔t2 ↦ t1∉privileged_wrt" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#G"/>
 <org.eventb.core.poPredicate name="reference_monitos," org.eventb.core.predicate="∀m1⦂TCBSUBSETS·m1∈RM⇒(∀mi⦂TCBSUBSETS·m1≠mi⇒m1 ↦ mi∈tamperproof_wrt)" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#]"/>
 <org.eventb.core.poPredicate name="reference_monitos-" org.eventb.core.predicate="∀m1⦂TCBSUBSETS,mj⦂TCBSUBSETS·m1∈RM∧mj∈TCBSUBSETS∧m1≠mj⇒mj ↦ m1∉privileged_wrt" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#^"/>
-<org.eventb.core.poIdentifier name="source_of_obj" org.eventb.core.type="ℙ(OBJECTS×TCBSUBSETS)"/>
+<org.eventb.core.poPredicate name="reference_monitos." org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS·host_of_tcb(t1)≠host_of_tcb(t2)⇒t1 ↦ t2∈tamperproof_wrt∧t2 ↦ t1∈tamperproof_wrt" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#a"/>
+<org.eventb.core.poPredicate name="reference_monitos/" org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS,d1⦂DOMAINS,d2⦂DOMAINS·host_of_tcb(t1)≠host_of_tcb(t2)∧d1=domain_of_tcb(t1)∧d2=domain_of_tcb(t2)⇒d1≠d2∧d1 ↦ d2∉dominates∧d2 ↦ d1∉dominates" org.eventb.core.source="/shockley-schell-model/TCB_Subsets.buc|org.eventb.core.contextFile#TCB_Subsets|org.eventb.core.axiom#b"/>
+<org.eventb.core.poIdentifier name="inherited_objs" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(OBJECTS))"/>
+<org.eventb.core.poIdentifier name="interface_objs" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(OBJECTS))"/>
+<org.eventb.core.poIdentifier name="interpreted_objs" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(OBJECTS))"/>
+<org.eventb.core.poIdentifier name="protected_objs" org.eventb.core.type="ℙ(TCBSUBSETS×ℙ(OBJECTS))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/shockley-schell-model/TCB_Objects.bpo|org.eventb.core.poFile#TCB_Objects|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="51">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="source_of_obj∈OBJECTS → TCBSUBSETS" org.eventb.core.source="/shockley-schell-model/TCB_Objects.buc|org.eventb.core.contextFile#TCB_Objects|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/shockley-schell-model/TCB_Objects.bpo|org.eventb.core.poFile#TCB_Objects|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="58">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="protected_objs∈TCBSUBSETS → ℙ(OBJECTS)" org.eventb.core.source="/shockley-schell-model/TCB_Objects.buc|org.eventb.core.contextFile#TCB_Objects|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="inherited_objs∈TCBSUBSETS → ℙ(OBJECTS)" org.eventb.core.source="/shockley-schell-model/TCB_Objects.buc|org.eventb.core.contextFile#TCB_Objects|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="interpreted_objs∈TCBSUBSETS → ℙ(OBJECTS)" org.eventb.core.source="/shockley-schell-model/TCB_Objects.buc|org.eventb.core.contextFile#TCB_Objects|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="interface_objs∈TCBSUBSETS → ℙ(OBJECTS)" org.eventb.core.source="/shockley-schell-model/TCB_Objects.buc|org.eventb.core.contextFile#TCB_Objects|org.eventb.core.axiom#\/"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
