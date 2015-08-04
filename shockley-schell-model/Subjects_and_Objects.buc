@@ -16,9 +16,12 @@
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="D" org.eventb.core.identifier="dominates"/>
 <org.eventb.core.constant name="1" org.eventb.core.identifier="host_of_obj"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="P" org.eventb.core.identifier="host_of_subj"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="T" org.eventb.core.identifier="domain_of_subj"/>
 <org.eventb.core.constant name=":" org.eventb.core.identifier="hw_of_obj"/>
 <org.eventb.core.axiom name="3" org.eventb.core.comment="every object is associated with some host" org.eventb.core.label="axm3" org.eventb.core.predicate="host_of_obj ∈ OBJECTS → HOSTS"/>
 <org.eventb.core.axiom name="R" org.eventb.core.comment="every subject is associated with some host" org.eventb.core.label="axm6" org.eventb.core.predicate="host_of_subj ∈ SUBJECTS → HOSTS"/>
+<org.eventb.core.axiom name="V" org.eventb.core.label="axm7" org.eventb.core.predicate="domain_of_subj ∈ SUBJECTS → DOMAINS"/>
 <org.eventb.core.axiom name="9" org.eventb.core.comment="bijective fn between each (abstract) storage object and (concrete) hardware object" org.eventb.core.label="axm4" org.eventb.core.predicate="hw_of_obj ∈ STORAGE_OBJECTS ⤖ HW_OBJECTS"/>
+<org.eventb.core.axiom name="X" org.eventb.core.label="axm8" org.eventb.core.predicate="∀s · s ∈ SUBJECTS ⇒ prj2(s) = domain_of_subj(s)"/>
 <org.eventb.core.axiom name="B" org.eventb.core.label="axm5" org.eventb.core.predicate="∀x · x ∈ VIRTUAL_OBJECTS ⇒ x ∉ STORAGE_OBJECTS" org.eventb.core.theorem="true"/>
 </org.eventb.core.contextFile>
