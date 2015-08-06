@@ -2434,9 +2434,9 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="POLICY⊆POLICYSETS"/>
 <org.eventb.core.prPred name="p36" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="partition(MODE,{read},{write},{execute})"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="pol0/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="t" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="DOMAINS,HOSTS,MODE,OBJECTS,PROCESSES,TCBSUBSETS">
 <org.eventb.core.lang name="L"/>
@@ -4893,11 +4893,11 @@
 <org.eventb.core.prIdent name="m1" org.eventb.core.type="TCBSUBSETS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="tamperproof_wrt∈TCBSUBSETS ↔ TCBSUBSETS"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="rm1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="m" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="HOSTS,TCBSUBSETS">
 <org.eventb.core.lang name="L"/>
@@ -6054,8 +6054,8 @@
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p40,p29"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(OBJECTS,VIRTUAL_OBJECTS,STORAGE_OBJECTS))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p11"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p11"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p45" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p18,p12"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p18,p12"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MODE,{read},{write},{execute}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p46" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p21,p28,p20,p38"/>
@@ -6084,7 +6084,7 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p65" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p66" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p66" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees t1,t2,d1,d2)" org.eventb.core.prGoal="p56" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p67">
 <org.eventb.core.prIdent name="t1" org.eventb.core.type="TCBSUBSETS"/>
@@ -6099,7 +6099,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p73">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with d2=domain_of_tcb(t2)" org.eventb.core.prGoal="p73" org.eventb.core.prHyps="p68">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p74">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p74" org.eventb.core.prHyps="p36,p24,p39,p5,p3,p27,p14,p37,p19,p10,p1,p2,p31,p8,p13,p4,p7,p17,p16,p26,p30,p42,p15,p35,p23,p40,p29,p18,p11,p21,p28,p20,p38,p22,p9,p25,p43,p6,p34,p32,p41,p33,p12,p68,p69,p70">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p74" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p68,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p69,p37,p38,p39,p40,p41,p42,p70,p43">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -6112,7 +6112,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p76">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with d2=domain_of_tcb(t2)" org.eventb.core.prGoal="p76" org.eventb.core.prHyps="p68">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p77">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p77" org.eventb.core.prHyps="p36,p24,p39,p5,p3,p27,p14,p37,p19,p10,p1,p2,p31,p8,p13,p4,p7,p17,p16,p26,p30,p42,p15,p35,p23,p40,p29,p18,p11,p21,p28,p20,p38,p22,p9,p25,p43,p6,p34,p32,p41,p33,p12,p68,p69,p70">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p77" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p68,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p69,p37,p38,p39,p40,p41,p42,p70,p43">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -6125,7 +6125,7 @@
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p79">
 <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with d2=domain_of_tcb(t2)" org.eventb.core.prGoal="p79" org.eventb.core.prHyps="p68">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p80">
-<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p80" org.eventb.core.prHyps="p36,p24,p39,p5,p3,p27,p14,p37,p19,p10,p1,p2,p31,p8,p13,p4,p7,p17,p16,p26,p30,p42,p15,p35,p23,p40,p29,p18,p11,p21,p28,p20,p38,p22,p9,p25,p43,p6,p34,p32,p41,p33,p12,p68,p69,p70">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p80" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p68,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36,p69,p37,p38,p39,p40,p41,p42,p70,p43">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="30000"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -6181,7 +6181,7 @@
 <org.eventb.core.prIdent name="reference_monitors" org.eventb.core.type="ℙ(HOSTS×TCBSUBSETS)"/>
 <org.eventb.core.prIdent name="tamperproof_wrt" org.eventb.core.type="ℙ(TCBSUBSETS×TCBSUBSETS)"/>
 <org.eventb.core.prIdent name="write" org.eventb.core.type="MODE"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀ep⦂ℙ(COMPONENTS),ci⦂COMPONENTS·ep∈ENDPOINTS∧ci∈ep⇒host_of_hw(ci)=host_of_endpoint(ep)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀ep⦂ℙ(COMPONENTS),ci⦂COMPONENTS·ep∈ENDPOINTS∧ci∈ep⇒host_of_hw(ci)=host_of_endpoint(ep)"/>
 <org.eventb.core.prPred name="p74" org.eventb.core.predicate="¬domain_of_tcb(t1)=domain_of_tcb(t2)">
 <org.eventb.core.prIdent name="t1" org.eventb.core.type="TCBSUBSETS"/>
 <org.eventb.core.prIdent name="t2" org.eventb.core.type="TCBSUBSETS"/>
@@ -6189,9 +6189,9 @@
 <org.eventb.core.prPred name="p52" org.eventb.core.predicate="∀m1⦂TCBSUBSETS·m1∈RM⇒(∀mi⦂TCBSUBSETS·m1≠mi⇒m1 ↦ mi∈tamperproof_wrt)"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS,d1⦂DOMAINS,d2⦂DOMAINS·d1=domain_of_tcb(t1)∧d2=domain_of_tcb(t2)∧¬t1=t2⇒¬d1=d2"/>
 <org.eventb.core.prPred name="p57" org.eventb.core.predicate="ENDPOINTS⊆ℙ(COMPONENTS)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="policy_of_tcb∈TCBSUBSETS ⤖ POLICIES"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="policy_of_tcb∈TCBSUBSETS ⤖ POLICIES"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀x⦂OBJECTS·x∈VIRTUAL_OBJECTS⇒¬x∈STORAGE_OBJECTS"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="∀m1⦂TCBSUBSETS,mj⦂TCBSUBSETS·m1∈RM∧¬m1=mj⇒¬mj ↦ m1∈privileged_wrt"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="∀m1⦂TCBSUBSETS,mj⦂TCBSUBSETS·m1∈RM∧¬m1=mj⇒¬mj ↦ m1∈privileged_wrt"/>
 <org.eventb.core.prPred name="p16" org.eventb.core.predicate="host_of_tcb∈TCBSUBSETS → HOSTS"/>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="domain_of_tcb∈TCBSUBSETS ↣ DOMAINS"/>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="OBJECTS=VIRTUAL_OBJECTS∪STORAGE_OBJECTS"/>
@@ -6228,7 +6228,7 @@
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS·t1 ↦ t2∈tamperproof_wrt⇔¬t2 ↦ t1∈privileged_wrt"/>
 <org.eventb.core.prPred name="p54" org.eventb.core.predicate="∀m1⦂TCBSUBSETS,mj⦂TCBSUBSETS·m1∈RM∧mj∈TCBSUBSETS∧¬m1=mj⇒¬mj ↦ m1∈privileged_wrt"/>
-<org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀h⦂HOSTS,m⦂TCBSUBSETS·h ↦ m∈reference_monitors⇔m∈RM∧h=host_of_tcb(m)"/>
+<org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀h⦂HOSTS,m⦂TCBSUBSETS·h ↦ m∈reference_monitors⇔m∈RM∧h=host_of_tcb(m)"/>
 <org.eventb.core.prPred name="p38" org.eventb.core.predicate="MODE={read,write,execute}"/>
 <org.eventb.core.prPred name="p70" org.eventb.core.predicate="¬host_of_tcb(t1)=host_of_tcb(t2)">
 <org.eventb.core.prIdent name="t1" org.eventb.core.type="TCBSUBSETS"/>
@@ -6251,15 +6251,15 @@
 <org.eventb.core.prIdent name="t2" org.eventb.core.type="TCBSUBSETS"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p56" org.eventb.core.predicate="∀t1⦂TCBSUBSETS,t2⦂TCBSUBSETS,d1⦂DOMAINS,d2⦂DOMAINS·¬host_of_tcb(t1)=host_of_tcb(t2)∧d1=domain_of_tcb(t1)∧d2=domain_of_tcb(t2)⇒¬d1=d2∧¬d1 ↦ d2∈dominates∧¬d2 ↦ d1∈dominates"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="POLICY∈POLICIES"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="POLICY∈POLICIES"/>
 <org.eventb.core.prPred name="p80" org.eventb.core.predicate="¬domain_of_tcb(t2) ↦ domain_of_tcb(t1)∈dominates">
 <org.eventb.core.prIdent name="t1" org.eventb.core.type="TCBSUBSETS"/>
 <org.eventb.core.prIdent name="t2" org.eventb.core.type="TCBSUBSETS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="ACCESSES=SUBJECTS × OBJECTS × MODE"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="POLICIES=ℙ(ACCESSES)"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ACCESSES=SUBJECTS × OBJECTS × MODE"/>
 <org.eventb.core.prPred name="p10" org.eventb.core.predicate="host_of_subj∈SUBJECTS → HOSTS"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="VIRTUAL_OBJECTS∩STORAGE_OBJECTS=(∅ ⦂ ℙ(OBJECTS))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="POLICIES=ℙ(ACCESSES)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="VIRTUAL_OBJECTS∩STORAGE_OBJECTS=(∅ ⦂ ℙ(OBJECTS))"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="∀a⦂PROCESSES×DOMAINS×OBJECTS×MODE·a∈POLICY⇒(∃t⦂TCBSUBSETS·a∈policy_of_tcb(t))"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS,c⦂DOMAINS·a ↦ b∈dominates∧b ↦ c∈dominates⇒a ↦ c∈dominates"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="∀m1⦂TCBSUBSETS,mj⦂TCBSUBSETS·m1∈RM∧mj∈TCBSUBSETS∧m1≠mj⇒mj ↦ m1∉privileged_wrt"/>
@@ -6298,7 +6298,7 @@
 <org.eventb.core.prIdent name="d1" org.eventb.core.type="DOMAINS"/>
 <org.eventb.core.prIdent name="t1" org.eventb.core.type="TCBSUBSETS"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p36" org.eventb.core.predicate="host_of_hw∈COMPONENTS → HOSTS"/>
+<org.eventb.core.prPred name="p35" org.eventb.core.predicate="host_of_hw∈COMPONENTS → HOSTS"/>
 <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀a⦂DOMAINS,b⦂DOMAINS·a ↦ b∈dominates∧b ↦ a∈dominates⇒a=b"/>
 <org.eventb.core.prPred name="p39" org.eventb.core.predicate="host_of_endpoint∈ENDPOINTS → HOSTS"/>
 <org.eventb.core.prPred name="p40" org.eventb.core.predicate="HW_OBJECTS∩HW_DEVICES=(∅ ⦂ ℙ(COMPONENTS))"/>
@@ -6307,12 +6307,12 @@
 <org.eventb.core.prPred name="p44" org.eventb.core.predicate="partition(COMPONENTS,HW_OBJECTS,HW_DEVICES)"/>
 <org.eventb.core.prPred name="p46" org.eventb.core.predicate="partition(MODE,{read},{write},{execute})"/>
 <org.eventb.core.prReas name="r7" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>
