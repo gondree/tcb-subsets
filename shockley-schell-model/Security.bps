@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="axm1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="axm1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="axm2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="axm2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="axm3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="axm4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="axm4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c0/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c1/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="7" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="c3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="9" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="central/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="central/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="8" org.eventb.core.psManual="true"/>
+</org.eventb.core.psFile>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
 <org.eventb.core.psStatus name="pol1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="pol2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="pol3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="pol4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="pol4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="rm1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="priv1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="priv2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="priv2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="priv5/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="ntcb1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ntcb2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="ntcb2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="11" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="pol2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="pol3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="pol4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="pol4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="rm1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="priv1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="priv2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="priv2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="priv5/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="ntcb1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ntcb2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="ntcb2/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

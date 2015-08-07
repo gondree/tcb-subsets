@@ -9,7 +9,7 @@
 <org.eventb.core.axiom name="U" org.eventb.core.comment="relation among TCB subsets" org.eventb.core.label="rel4" org.eventb.core.predicate="privileged_wrt ∈ TCBSUBSETS ↔ TCBSUBSETS"/>
 <org.eventb.core.axiom name="V" org.eventb.core.comment="relation among TCB subsets" org.eventb.core.label="rel5" org.eventb.core.predicate="tamperproof_wrt ∈ TCBSUBSETS ↔ TCBSUBSETS"/>
 <org.eventb.core.axiom name="W" org.eventb.core.comment="relation among each host and the TCB subset comprising its local reference monitor, since NTCB partitions open the possibility of many (local) reference monitors" org.eventb.core.label="rel6" org.eventb.core.predicate="reference_monitors ∈ HOSTS ↔ TCBSUBSETS"/>
-<org.eventb.core.axiom name="Y" org.eventb.core.label="pol1" org.eventb.core.predicate="∀a,t · a ∈ policy_of_tcb(t) ⇒ a ∈ POLICYSETS"/>
+<org.eventb.core.axiom name="Y" org.eventb.core.label="pol1" org.eventb.core.predicate="∀a,t · a ∈ policy_of_tcb(t) ⇔ a ∈ POLICYSETS"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="M" org.eventb.core.comment="the set of all reference monitors" org.eventb.core.identifier="RM"/>
 <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="policy_of_tcb"/>
 <org.eventb.core.axiom name="@" org.eventb.core.comment="``the union of which includes every element of the original set P'' (Sec 3, pg.133)" org.eventb.core.label="pol2" org.eventb.core.predicate="POLICY ⊆ { a ∣ ∀t⦂TCBSUBSETS · a∈policy_of_tcb(t) }"/>

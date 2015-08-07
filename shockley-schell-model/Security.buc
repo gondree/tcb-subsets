@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="TCB_Objects"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="rel1" org.eventb.core.predicate="evaluable ∈ ℙ(TCBSUBSETS) × POLICIES → BOOL"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="rel2" org.eventb.core.predicate="enforces ∈ ℙ(TCBSUBSETS) × POLICIES → BOOL"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="evaluable"/>
+<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="enforces"/>
+<org.eventb.core.axiom name="-" org.eventb.core.comment="trivial" org.eventb.core.label="axm1" org.eventb.core.predicate="∀ti⦂ℙ(TCBSUBSETS),pi · pi∈POLICIES ∧ ¬ TRUE = evaluable(ti↦pi) ⇒ FALSE = evaluable(ti↦pi)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="." org.eventb.core.comment="trivial" org.eventb.core.label="axm2" org.eventb.core.predicate="∀ti⦂ℙ(TCBSUBSETS),pi · pi∈POLICIES ∧ ¬ TRUE = enforces(ti↦pi) ⇒ FALSE = enforces(ti↦pi)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="/" org.eventb.core.comment="simplification: we are unable to truly model evaluability in many senses" org.eventb.core.label="axm3" org.eventb.core.predicate="∀ti⦂ℙ(TCBSUBSETS),pi · pi ∈ POLICIES ∧ TRUE = evaluable(ti↦pi) ⇔ pi ∈ POLICIES ∧ TRUE = enforces(ti↦pi)"/>
+<org.eventb.core.axiom name="0" org.eventb.core.comment="trivial" org.eventb.core.label="axm4" org.eventb.core.predicate="∀ti⦂ℙ(TCBSUBSETS),pi · pi ∈ POLICIES ∧ FALSE = evaluable(ti↦pi) ⇔ pi ∈ POLICIES ∧ FALSE = enforces(ti↦pi)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="c0" org.eventb.core.predicate="( ∀ti⦂TCBSUBSETS · TRUE = enforces({ti} ↦ policy_of_tcb(ti)) ) ⇒ TRUE = enforces(TCBSUBSETS ↦ POLICY)"/>
+<org.eventb.core.axiom name="4" org.eventb.core.label="c1" org.eventb.core.predicate="( ∀ti⦂TCBSUBSETS · TRUE = enforces({ti} ↦ policy_of_tcb(ti)) ) ⇒ ( ∀ti⦂TCBSUBSETS · TRUE = evaluable({ti} ↦ policy_of_tcb(ti)) )" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="6" org.eventb.core.label="c2" org.eventb.core.predicate="TRUE = enforces(TCBSUBSETS ↦ POLICY) ⇒ TRUE = evaluable(TCBSUBSETS ↦ POLICY)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="8" org.eventb.core.label="c3" org.eventb.core.predicate="( ∀ti⦂TCBSUBSETS · TRUE = enforces({ti} ↦ policy_of_tcb(ti)) ) ⇒ TRUE = evaluable(TCBSUBSETS ↦ POLICY)" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="2" org.eventb.core.label="central" org.eventb.core.predicate="( ∀ti⦂TCBSUBSETS · TRUE = evaluable({ti} ↦ policy_of_tcb(ti)) ) ⇒ TRUE = evaluable(TCBSUBSETS ↦ POLICY)" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

@@ -32,11 +32,4 @@
 <org.eventb.core.axiom name="S" org.eventb.core.comment="s can access o if there is a (more privileged) TCB subset with an interface for o and access is permitted by policy" org.eventb.core.label="sec4" org.eventb.core.predicate="∀s,o⦂OBJECTS,d⦂DOMAINS,di⦂DOMAINS · (∃ti · di=domain_of_tcb(ti) ∧ s∈SUBJECTS ∧ d=domain_of_subj(s) ∧ di↦d ∈ dominates ∧ o ∈ interface_objs(ti) ∧ (¬∃m · s↦o↦m ∈ policy_of_tcb(ti))) ⇒ o ∈ accessible_by_policy(s)"/>
 <org.eventb.core.axiom name="L" org.eventb.core.comment="s can access o if its more privileged" org.eventb.core.label="sec5" org.eventb.core.predicate="∀s,o⦂OBJECTS,d⦂DOMAINS · (s∈SUBJECTS ∧ d = domain_of_subj(s) ∧ o ∈ accessible_to_domain(d)) ⇒ o ∈ accessible_to_subj(s)"/>
 <org.eventb.core.axiom name="T" org.eventb.core.comment="s can access o if its permitted by policy" org.eventb.core.label="sec6" org.eventb.core.predicate="∀s,o⦂OBJECTS · (s∈SUBJECTS ∧ o ∈ accessible_by_policy(s)) ⇒ o ∈ accessible_to_subj(s)"/>
-<org.eventb.core.axiom name="U" org.eventb.core.label="eval1" org.eventb.core.predicate="evaluable ∈ ℙ(TCBSUBSETS) × POLICIES → BOOL"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="V" org.eventb.core.identifier="evaluable"/>
-<org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="W" org.eventb.core.identifier="enforces"/>
-<org.eventb.core.axiom name="X" org.eventb.core.label="eval2" org.eventb.core.predicate="enforces ∈ ℙ(TCBSUBSETS) × POLICIES → BOOL"/>
-<org.eventb.core.axiom name="]" org.eventb.core.label="eval3" org.eventb.core.predicate="∀ti⦂TCBSUBSETS,pi · pi ∈ POLICIES ∧ TRUE = evaluable({ti}↦pi) ⇒ TRUE = enforces({ti}↦pi) ∧ (∀pj · pj ∈ POLICIES ∧ pj ≠ pi ⇒ FALSE = enforces({ti}↦pj))"/>
-<org.eventb.core.axiom name="Y" org.eventb.core.label="eval" org.eventb.core.predicate="∀S · ( S={ ti,pi · ti∈TCBSUBSETS ∧ pi=policy_of_tcb(ti) ∣ evaluable({ti} ↦ pi) } ∧ S≠∅ ∧ FALSE ∉ S ) ⇒ TRUE = evaluable(TCBSUBSETS ↦ POLICY)"/>
-<org.eventb.core.axiom name="a" org.eventb.core.label="axm1" org.eventb.core.predicate="{ ti,pi · ti∈TCBSUBSETS ∧ pi=policy_of_tcb(ti) ∣ evaluable({ti} ↦ pi) } = {TRUE} ⇒ TRUE = evaluable(TCBSUBSETS ↦ POLICY)" org.eventb.core.theorem="true"/>
 </org.eventb.core.contextFile>
