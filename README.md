@@ -11,7 +11,7 @@ The simplest way to view the model and start to check or use the axioms related 
 3. File > Import & navigate to the cloned tcb-subsets project files and import these
 
 ### To Use
-There is a ()to-be-released) technical report explaining how new machine abstractions can be related to TCB subset context abstractions via extends relationships, etc.
+There is a (to-be-released) technical report explaining how new machine abstractions can be related to TCB subset context abstractions via extends relationships, etc.
 
 ----
 [SS87] Shockley, William R., and Roger R. Schell. "TCB subsets for incremental evaluation." Proceedings of the Third Aerospace Computer Security Conference, Orlando, Florida. 1987.
